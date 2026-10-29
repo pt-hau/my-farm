@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+        :root{
+          --bg:#fef9e7;
+          --green:#a7d397;
+          --green-dark:#7fbb6a;
+          --accent:#ff9a8a;
+          --accent-2:#ffb7a8;
+          --wood:#5d4037;
+          --wood-light:#8d6e63;
+          --soil:#a67c52;
+          --soil-dark:#7a5a3a;
+          --ink:#2b2b2b;
+          --card:#ffffff;
+          --shadow: 4px 4px 0px #000;
+          --safe-area-inset-top: env(safe-area-inset-top, 0px);
+        }
+        *{font-family:'Nunito', system-ui, sans-serif; -webkit-tap-highlight-color: transparent;}
+        html{color-scheme: light;}
+        body, div, p, span, h1, h2, h3, h4 { color: var(--ink); }
+        button, a, [role="button"] { font-family:'Nunito', system-ui, sans-serif; }
+        button:focus, button:active, div:focus, div:active {
+          outline: 2px solid #5d4037 !important;
+          outline-offset: 2px !important;
+        }
+        .btn-dark, .action-btn, .shop-buy-btn {
+          color: #ffffff !important;
+          text-shadow: none !important;
+        }
+        .btn-dark *, .action-btn *, .shop-buy-btn * {
+          color: #ffffff !important;
+        }
+        .light-card, .card-light, .bg-white, .bg-\[var\(--bg\)\] {
+          color: #3e2723 !important;
+        }
+        .light-card *, .card-light * {
+          color: #3e2723;
+        }
+        .bg-black, .bg-\[var\(--wood\)\], .bg-\[\#5d4037\], .bg-\[\#2a334d\] {
+          color: #ffffff !important;
+        }
+        .bg-black *, .bg-\[var\(--wood\)\] * {
+          color: #ffffff;
+        }
+        .tool-btn-selected {
+          color: #2b2b2b !important;
+        }
+        button.bg-white:focus, button.bg-white:active,
+        div.bg-white:focus, div.bg-white:active,
+        button.bg-\[var\(--bg\)\]:focus, button.bg-\[var\(--bg\)\]:active {
+          color: #3e2723 !important;
+          background-color: #ffffff !important;
+        }
+        button.bg-black:focus, button.bg-black:active,
+        button.bg-\[var\(--accent\)\]:focus, button.bg-\[var\(--accent\)\]:active {
+          color: #ffffff !important;
+        }
+        .clickable-light:focus, .clickable-light:active {
+          color: #3e2723 !important;
+        }
+        @media (prefers-color-scheme: dark){
+          :root{ --bg:#fef9e7; --card:#ffffff; --ink:#2b2b2b; }
+        }
+        @keyframes float {0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        @keyframes floatSlow {0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(6px) translateY(-6px)}}
+        @keyframes wiggle {0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+        @keyframes bounceSoft {0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+        @keyframes sway {0%,100%{transform:rotate(-2deg)}50%{transform:rotate(3deg)}}
+        @keyframes popIn {0%{transform:scale(0.6)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
+        @keyframes newSoil {0%{transform:scale(0) rotate(-8deg); opacity:0}60%{transform:scale(1.15) rotate(2deg); opacity:1}100%{transform:scale(1) rotate(0); opacity:1}}
+        @keyframes dust {0%{transform:translateY(0) scale(1); opacity:.6}100%{transform:translateY(10px) scale(1.6); opacity:0}}
+        @keyframes waterFall {0%{transform:translateY(-6px) scaleY(0.8); opacity:0}30%{opacity:1}100%{transform:translateY(14px) scaleY(1.2); opacity:0}}
+        @keyframes coinFly {0%{transform:translateY(0) scale(1); opacity:1}70%{opacity:1}100%{transform:translateY(-70px) scale(1.3); opacity:0}}
+        @keyframes coinToWallet {0%{transform:translate(0,0) scale(1); opacity:1}100%{transform:translate(200px,-300px) scale(0.2); opacity:0}}
+        @keyframes walletBump {0%,100%{transform:scale(1)}30%{transform:scale(1.15)}60%{transform:scale(0.95)}}
+        @keyframes leafWiggle {0%,100%{transform:rotate(-6deg) scale(1)}50%{transform:rotate(8deg) scale(1.05)}}
+        @keyframes firefly {0%,100%{opacity:.2; transform:translate(0,0)}50%{opacity:1; transform:translate(8px,-12px)}}
+        @keyframes awning {0%,100%{transform:skewX(-2deg)}50%{transform:skewX(2deg)}}
+        @keyframes walkBounce {0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+        @keyframes toastIn {0%{transform:translateY(20px) scale(.9); opacity:0}100%{transform:translateY(0) scale(1); opacity:1}}
+        @keyframes sweatFall {0%{transform:translateY(-8px) translateX(0) scale(0.8); opacity:0}15%{opacity:1}100%{transform:translateY(42px) translateX(6px) scale(1.1); opacity:0}}
+        @keyframes tearFall {0%{transform:translateY(0) scale(1); opacity:0.9}100%{transform:translateY(56px) scale(0.9); opacity:0}}
+        @keyframes dizzySpin {0%{transform:rotate(0deg) translateX(18px) rotate(0deg)}100%{transform:rotate(360deg) translateX(18px) rotate(-360deg)}}
+        @keyframes dizzySpin2 {0%{transform:rotate(0deg) translateX(-20px) rotate(0deg)}100%{transform:rotate(-360deg) translateX(-20px) rotate(360deg)}}
+        @keyframes shakeX {0%,100%{transform:translateX(0) rotate(-1deg)}20%{transform:translateX(-3px) rotate(-2deg)}40%{transform:translateX(3px) rotate(2deg)}60%{transform:translateX(-2px) rotate(-1deg)}80%{transform:translateX(2px) rotate(1deg)}}
+        @keyframes steamUp {0%{transform:translateY(6px) scale(0.8); opacity:0}50%{opacity:0.6}100%{transform:translateY(-18px) scale(1.4); opacity:0}}
+        @keyframes faintPulse {0%,100%{transform:rotate(90deg) scale(1)}50%{transform:rotate(90deg) scale(1.03)}}
+        @keyframes heartPop {0%{transform:translateY(0) scale(0.5); opacity:0}30%{opacity:1; transform:translateY(-10px) scale(1.2)}100%{transform:translateY(-40px) scale(0.8); opacity:0}}
+        @keyframes barShine {0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+        @keyframes waterSplashDrop {0%{transform:translateY(-30px) translateX(0) scale(0.3); opacity:0}20%{opacity:1; transform:translateY(-10px) scale(1)}80%{opacity:0.9}100%{transform:translateY(30px) translateX(var(--dx,6px)) scale(0.9); opacity:0}}
+        @keyframes splashImpact {0%{transform:scale(0); opacity:0}40%{transform:scale(1.2); opacity:0.9}100%{transform:scale(1.6); opacity:0}}
+        @keyframes splashShake {0%,100%{transform:rotate(90deg) translateX(0)}15%{transform:rotate(90deg) translateX(-6px) translateY(3px)}30%{transform:rotate(90deg) translateX(6px) translateY(-2px)}45%{transform:rotate(90deg) translateX(-4px)}60%{transform:rotate(90deg) translateX(4px)}}
+        @keyframes wakeUpPop {0%{transform:rotate(90deg) scale(0.9)}50%{transform:rotate(45deg) scale(1.1)}100%{transform:rotate(0deg) scale(1)}}
+        @keyframes bucketPour {0%{transform:rotate(-30deg) translateY(-10px)}50%{transform:rotate(10deg) translateY(2px)}100%{transform:rotate(-30deg) translateY(-10px)}}
+        @keyframes sunRays {0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+        @keyframes sunPulse {0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+        @keyframes cloudMove {0%{transform:translateX(-10%)}100%{transform:translateX(110%)}}
+        @keyframes cloudMoveSlow {0%{transform:translateX(-20%)}100%{transform:translateX(120%)}}
+        @keyframes starTwinkle {0%,100%{opacity:0.2; transform:scale(0.8)}50%{opacity:1; transform:scale(1.2)}}
+        @keyframes moonGlow {0%,100%{box-shadow:0 0 12px rgba(255,255,255,0.5), 0 0 24px rgba(200,220,255,0.3)}50%{box-shadow:0 0 18px rgba(255,255,255,0.8), 0 0 32px rgba(200,220,255,0.5)}}
+        @keyframes fireflyGlow {0%,100%{opacity:0.3; transform:translate(0,0) scale(0.9)}50%{opacity:1; transform:translate(6px,-8px) scale(1.1)}}
+        @keyframes babyBounce {0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+        @keyframes babyCry {0%,100%{transform:translateX(0)}25%{transform:translateX(-2px)}75%{transform:translateX(2px)}}
+        .cartoon-border{border:3px solid #000; box-shadow:var(--shadow);}
+        .cartoon-border-sm{border:2.5px solid #000; box-shadow:3px 3px 0 #000;}
+        .text-stroke{-webkit-text-stroke:2px #000; paint-order:stroke fill;}
+        .hill{border-radius:50% 50% 0 0 / 70% 70% 0 0}
+        .force-dark-text{color:#2e2e2e !important;}
+        .force-dark-text *{color:#2e2e2e !important;}
+        .force-white-text{color:#ffffff !important;}
+        .force-white-text *{color:#ffffff !important;}
+        .action-btn{color:white !important; text-shadow:none;}
+        .light-card{color:#3e2723 !important;}
+.chx-purple{background:#d9c8ff}.chx-gold{background:#ffe08a}.chx-input{width:100%;height:44px;border:3px solid #000;border-radius:14px;padding:0 12px;font-weight:800;font-size:14px;text-transform:uppercase;color:#2e2e2e;background:#fff;box-sizing:border-box}.chx-modal{max-width:680px}.chx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.chx-pic{position:relative;height:190px;width:100%;display:flex;align-items:flex-end;justify-content:center}.chx-wrap{width:100%;margin-top:auto}.chx-act{width:100%;height:40px;border-radius:9999px}
+      
+
+        /* === Lớp giao diện 3D "vườn trên mây" (thêm sau, không sửa khối gốc) === */
+        :root{
+          --sky-top:#7ec8ff;
+          --sky-mid:#bfeaff;
+          --meadow:#9ed67e;
+          --meadow-dark:#6db356;
+          --soil-top:#b07a4a;
+          --soil-side:#6d4526;
+          --gold-3d:#ffd54f;
+        }
+        @keyframes floatY {0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+        @keyframes driftAcross {0%{transform:translateX(-30vw)}100%{transform:translateX(115vw)}}
+        @keyframes butterflyFly {0%,100%{transform:translate(0,0) rotate(-4deg)}25%{transform:translate(10px,-14px) rotate(5deg)}50%{transform:translate(22px,-4px) rotate(-3deg)}75%{transform:translate(10px,8px) rotate(4deg)}}
+        @keyframes glowPulse {0%,100%{box-shadow:0 0 0 0 rgba(255,213,79,.55), 0 0 18px rgba(255,213,79,.5)}50%{box-shadow:0 0 0 7px rgba(255,213,79,0), 0 0 28px rgba(255,213,79,.85)}}
+        @keyframes sparkleTwinkle {0%,100%{opacity:.35; transform:scale(.7) rotate(0deg)}50%{opacity:1; transform:scale(1.15) rotate(18deg)}}
+        @keyframes sproutPop {0%{transform:scale(.3) translateY(6px); opacity:0}70%{transform:scale(1.12) translateY(0); opacity:1}100%{transform:scale(1)}}
+        @keyframes islandFloat {0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+        @keyframes shineSweep {0%{transform:translateX(-130%) skewX(-18deg)}100%{transform:translateX(230%) skewX(-18deg)}}
+        .card-3d{box-shadow:4px 4px 0 #000, 0 16px 30px rgba(46,30,10,.22);}
+        .card-3d-hover{transition:transform .25s ease, box-shadow .25s ease;}
+        .card-3d-hover:hover{transform:translateY(-4px); box-shadow:4px 8px 0 #000, 0 22px 34px rgba(46,30,10,.26);}
+        .btn-3d{box-shadow:0 5px 0 #000, 0 12px 22px rgba(46,30,10,.22); transition:transform .12s ease, box-shadow .12s ease, filter .2s ease;}
+        .btn-3d:hover{transform:translateY(-2px); box-shadow:0 7px 0 #000, 0 16px 26px rgba(46,30,10,.24);}
+        .btn-3d:active{transform:translateY(4px); box-shadow:0 1px 0 #000, 0 6px 14px rgba(46,30,10,.2);}
+        .glass-3d{background:linear-gradient(160deg, rgba(255,255,255,.88), rgba(255,255,255,.62)); backdrop-filter:blur(14px); box-shadow:4px 4px 0 #000, 0 16px 30px rgba(46,30,10,.18);}
+        .title-3d{text-shadow:3px 3px 0 #000, 6px 6px 0 rgba(0,0,0,.16), 0 14px 26px rgba(46,30,10,.3);}
+        .img-3d{filter:drop-shadow(0 10px 10px rgba(46,30,10,.32));}
+        .plot-3d{box-shadow:inset 0 4px 0 rgba(255,255,255,.28), inset 0 -8px 0 rgba(0,0,0,.28), 0 10px 16px rgba(60,40,20,.35); transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;}
+        .plot-3d:hover{transform:translateY(-2px) scale(1.02); filter:brightness(1.06);}
+        .plot-3d:active{transform:translateY(2px);}
